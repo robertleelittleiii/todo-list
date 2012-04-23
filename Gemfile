@@ -9,10 +9,15 @@ gem 'sqlite3'
 # gem 'postgres'
 
 group :development, :test do
-gem "capybara"
-gem "rspec-rails", ">= 2.0.1"
-# gem 'ruby-debug'
-# gem 'ruby-debug19', :require => 'ruby-debug'
+  gem "capybara"
+  gem "rspec-rails", ">= 2.0.1"
+  gem 'cucumber-rails'
+  gem "cucumber", ">=0.3.0"
+  gem 'database_cleaner'
+  gem "factory_girl_rails"
+  
+  # gem 'ruby-debug'
+  # gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 

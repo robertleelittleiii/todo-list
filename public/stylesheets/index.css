@@ -1,0 +1,39 @@
+/* 
+    Document   : index
+    Created on : April 18 2012, 4:04:52 AM
+    Author     : rlittle
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+root { 
+    display: block;
+}
+
+#page {
+    width: 750px;
+    margin: auto;  
+
+}
+
+#top {
+
+}
+
+#middle {
+
+
+}
+
+#bottom {
+
+
+}
+
+

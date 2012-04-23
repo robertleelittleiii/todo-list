@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task-it</title>
+    <%= stylesheet_link_tag "scaffold.css" %>
+    <%= controller_stylesheet_link_tag %>
+    <%= stylesheet_link_tag "m-scaffold.css" %>
+
+<%#TODO:  *javascript_include_tag :defaults not working...%>
+    <%= javascript_include_tag 'jquery.js', 'jquery-ui.js', 'jquery_ujs.js','jquery.purr.js', 'application.js' %>
+
+    <%= javascript_include_tag 'jquery.caret.js'%>
+
+    <%= javascript_include_tag 'best_in_place.js'%>
+
+    <%= controller_javascript_include_tag  %>
+
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+
+    <%= yield %>
+
+  </body>
+</html>

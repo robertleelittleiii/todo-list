@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RailsQuiz</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+  <head>
+    <title>Task-it</title>
+    <%= stylesheet_link_tag "scaffold.css", "index.css" %>
+    <%= controller_stylesheet_link_tag %>
+    <%= stylesheet_link_tag "m-scaffold.css" %>
 
-<%= yield %>
+<%#TODO:  *javascript_include_tag :defaults not working...%>
+    <%= javascript_include_tag 'jquery.js', 'jquery-ui.js', 'jquery_ujs.js','jquery.purr.js', 'application.js' %>
 
-</body>
+    <%= javascript_include_tag 'jquery.caret.js'%>
+
+    <%= javascript_include_tag 'best_in_place.js'%>
+
+    <%= controller_javascript_include_tag  %>
+
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div id="page">
+      <div id="top">
+        <%= image_tag "taskitlogo_s.gif" %>
+        <b> <%= link_to "Log out", :controller=>:admin, :action=>:logout %> </b>
+      </div>
+      <div id="middle">
+        <%= yield %>
+      </div>
+      <div id="bottom">
+      </div>
+    </div>
+
+
+
+
+  </body>
 </html>

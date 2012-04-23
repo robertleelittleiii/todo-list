@@ -1,0 +1,36 @@
+/* 
+    Document   : admin
+    Created on : April 18, 2012, 11:20:32 PM
+    Author     : rlittle
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+
+.loginSpan {
+    padding:10px;
+    margin:100px;
+    zoom: 1;
+
+
+}
+.loginBlock {
+    zoom: 1;
+
+}
+
+.loginCell {
+    padding:10px;
+    margin:5px;
+    zoom: 1;
+
+}

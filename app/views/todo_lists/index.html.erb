@@ -1,0 +1,43 @@
+<div class="m-block">
+  <div align="center">
+    <!-- START:flash -->
+    <% if flash[:notice] -%>
+      <div id="notice"><%= flash[:notice] %></div>
+    <% end -%>
+    <!-- END:flash -->
+  </div>
+  <div id="m-list">
+    <h1  class="m-header">Todo list</h1>
+
+    <center><%= link_to 'New Todo list', :action=>:create_empty_record,:typeofrecord=>"todo_list" %></center>
+
+    <%  @todo_lists.each do |todo_list| %>
+      <div class="hr"></div>
+      <div class="todo-list-row" id=<%=  "'row_todo_list_#{todo_list.id}'" %> >
+      <table width ="100%"cellpadding="5" cellspacing="0">
+        <tr class="list-table" valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>"  onclick = "window.location.href ='<%=url_for(:controller => 'todo_lists', :id => todo_list.id,  :action => 'edit')%>' "  style = "cursor:pointer" >
+          <td align="left">
+            <div id="todo-list-id" class="hidden-item"><%= todo_list.id %></div>
+            <span class="list-title"><%= link_to(todo_list.list_name,{:controller => 'todo_lists', :id => todo_list.id,  :action => 'edit'},:id=>"list_name") %></span>
+          </td>
+          <td align="left">
+            <span class="list-title"><%= todo_list.list_description %></span>
+          </td>     
+        </tr>
+      </table>
+      <div align="right" class="image-delete-list" >
+                    <%=link_to "New Item", :controller=>:todos, :action=>:create_empty_record, :todo_list_id=>todo_list.id %>
+
+        <%=link_to image_tag("m-scaffold/Button-Delete.png", :border=>"0") , todo_list, :on_click=>"", :confirm => 'Are you sure?', :id=>"Delete_list", :method => :delete %>
+      </div>
+      </div>
+      
+        <ul id="todos-sortable">
+      <%= render :partial=>"todo_items", :collection=>todo_list.todos.order("priority")%>
+        </ul>
+    <% end %>
+    <div class="hr"></div>
+
+  </div>
+  <center><%= link_to 'New Todo list', :action=>:create_empty_record,:typeofrecord=>"todo_list" %></center>
+</div>

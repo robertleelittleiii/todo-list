@@ -21,3 +21,13 @@ Notes:
 Default Database is SQLite3, but you can use any other one you like, e.g. MySQL, PostgreSQL
 
 After 4 hours your github access will be turned off for this repo.
+
+Version History
+===============
+Version .1b - Implemented Todo list and User system.  Site utilizes live edit of entries using modified version of best_in_place gem.  
+
+TODO
+====
+Build a better way to manage users.
+
+

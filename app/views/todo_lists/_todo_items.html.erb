@@ -1,0 +1,27 @@
+<li id="task_<%=todo_items.id%>" class="todo-list-item">
+  <div class="hr"></div>
+  <div class="todo-row" id=<%=  "'row_todo_#{todo_items.id}'" %> >
+    <table width ="100%" cellpadding="5" cellspacing="0" border="0">
+      <tr  class="list-table" valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>"  onclick = "window.location.href ='<%=url_for(:controller => 'todos', :id => todo_items.id,  :action => 'edit')%>' ">
+        <td width="10" class="handle"></td>
+        <td align="left" width="100">
+          <div id="todo-item-id" class="hidden-item"><%= todo_items.id %></div>
+          <span  class="list-title" ><%= link_to( todo_items.name, {:controller => 'todos', :id => todo_items.id,  :action => 'edit'}, :id=>"edit-todo") %></span>
+        </td>
+        <td align="left">
+          <span class="list-title" width="200"><%= todo_items.description %></span>
+        </td>
+        <td align="left" width="100">
+          <span class="list-title"><%= todo_items.completion_date %></span>
+        </td>
+        <td align="left"width="50">
+          <span class="list-title"><%= todo_items.completed ? image_tag("tick_64.png", :width=>"16") : "" %></span>
+        </td>
+      </tr>
+    </table>
+    <div align="right" class="image-delete-list" >
+      <%=link_to image_tag("m-scaffold/Button-Delete.png", :border=>"0") , todo_items, :on_click=>"", :confirm => 'Are you sure?', :title=>"Delete_item", :id=>"Delete_item", :method => :delete %>
+    </div>
+  </div>
+
+</li>

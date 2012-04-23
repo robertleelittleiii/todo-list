@@ -1,0 +1,38 @@
+/* 
+    Document   : m-scaffold
+    Created on : April 18 2012, 11:24.04 PM
+    Author     : rlittle
+    Description:
+        custom scaffolding CSS
+*/
+
+root { 
+    display: block;
+}
+
+.handle {
+    background-color: grey;
+}
+.handle:hover {
+    cursor: move;
+}
+
+.todo-row:hover {
+    cursor:pointer;
+     background:#fef398 none repeat scroll 0 0;
+    color:#000000;   
+}
+
+.hidden-item {
+    display: none;
+}
+
+.todo-list-row:hover {
+    cursor:pointer;
+     background:#fef398 none repeat scroll 0 0;
+    color:#000000;   
+}
+
+li.todo-list-item {
+    list-style: none;
+}

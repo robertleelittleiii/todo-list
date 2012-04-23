@@ -1,0 +1,29 @@
+
+
+      <p>
+        <b>Name:</b><br>
+        <%=editablefieldcreate("name", @todo)%>
+      </p>
+
+
+
+      <p>
+        <b>Description:</b><br>
+        <%=editablefieldcreate("description", @todo)%>
+      </p>
+
+
+      <p>
+        <b>Completion Date:</b><br>
+        <%=editablefieldcreate("completion_date", @todo)%>
+      </p>
+
+
+
+      <p>
+        <b>Complete:</b><br>
+        <%=best_in_place(@todo, "completed", :type=>:checkbox).html_safe %>
+      </p>
+
+
+      

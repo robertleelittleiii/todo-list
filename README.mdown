@@ -18,9 +18,11 @@ TodoList
 Notes:
 ------
 
-Default Database is SQLite3, but you can use any other one you like, e.g. MySQL, PostgreSQL
+Test user info:
 
-After 4 hours your github access will be turned off for this repo.
+Username: admin@one.com
+Password: password
+
 
 Version History
 ===============
